@@ -192,13 +192,13 @@ void loop() {
 
 
 //função para medir quão cheia está a caixa
-void SonarSensor(int trigPin,int echoPin){ //função para medir a distância
-    digitalWrite(trigPin, LOW); //desliga o trigger para se certificar da precisão
-    delayMicroseconds(2); //esperar 2 microssegundos 
+void SonarSensor(int trigPin,int echoPin){
+    digitalWrite(trigPin, LOW); 
+    delayMicroseconds(2); 
     digitalWrite(trigPin, HIGH); //mandar um pulso
-    delayMicroseconds(10); //deixar o pulso por 10microssegundos
-    digitalWrite(trigPin, LOW); //desligar o pulso
-    duration = pulseIn(echoPin, HIGH); //medir a duração do pulso
+    delayMicroseconds(10); 
+    digitalWrite(trigPin, LOW); 
+    duration = pulseIn(echoPin, HIGH); 
     distance = (duration/2) / 29.1; //divir a duração por 29.1 que é a velocidade do som em 
                                     //cm/microssegundo e por 2 para ser só a ida do som
 }
